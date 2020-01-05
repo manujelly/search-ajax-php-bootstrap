@@ -21,6 +21,8 @@ function search(){
 
         if ($query->num_rows>0){
             foreach ($query->fetch_all() as $item){
+                //modifier les index afin de faire correspondre tes données
+                // avec celle de la base de données
                 echo parseMessage($item[0],$item[3]);
             }
         }
